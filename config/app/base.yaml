@@ -1,0 +1,17 @@
+
+Debug:
+  enabled: true
+
+Application:
+  title: "Test"
+  cdn:
+    jquery: "/resource"
+    semantic-ui: "/resource"
+    serialize-object: "/resource"
+    atk: "/resource"
+
+Database:
+  dsn: "mysql:dbname=nemesi;host=localhost"
+  user: "root"
+  pass: "root"
+  fluid: true
