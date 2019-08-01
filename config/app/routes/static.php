@@ -19,33 +19,12 @@ return [
         },
     ],
     [
-        '/',
-        ['GET', 'POST'],
-        [\App\Frontend\Main::class],
-        function ($app, ...$parameters): void {
-            $app->add(new \atk4\login\Auth())->setModel(new \Nemesi\Models\User($app->db));
-        },
-        function ($app, ...$parameters): void {
-            echo 'AFTER';
-        },
-    ],
-    [
-        '/backend',
-        ['GET', 'POST'],
-        [\App\Backend\Main::class],
-    ],
-    [
-        '/routed',
-        ['GET', 'POST'],
-        [\App\Test::class, 'routed'],
-    ],
-    [
         '/resource/themes/default/assets/fonts/{path:.+}',
         ['GET'],
         [
             RoutedServeStatic::class,
             [
-                getcwd().'/public/assets',
+                getcwd().'/public/assets/fonts',
                 [
                     'woff',
                     'woff2',
@@ -53,11 +32,6 @@ return [
                 ],
             ],
         ],
-    ],
-    [
-        '/routed_static',
-        ['GET', 'POST'],
-        [\App\Test::class, 'routed_static'],
     ],
     [
         '/resource/{path:.+}',
