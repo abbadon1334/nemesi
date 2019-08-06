@@ -37,7 +37,9 @@ class Nemesi
      */
     public function __construct(?App $app = null)
     {
-        $this->atk          = $app ?? new App(['always_run' => false]);
+        $this->atk          = $app ?? new App([
+            'always_run' => false,
+        ]);
         $this->configurator = new NemesiConfigurator();
         $this->router       = new Router($this->atk);
     }
