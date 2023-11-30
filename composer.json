@@ -10,7 +10,7 @@
         "atk4/ui": "dev-develop as 1.7.1",
         "atk4/login": "dev-develop@dev",
         "atk4/schema": "dev-develop as 1.1.6",
-        "symfony/yaml": "^5.0@dev",
+        "symfony/yaml": "^7.0.0@dev",
         "thecodingmachine/safe": "^0.1.0@dev"
     },
     "license": "MIT",
